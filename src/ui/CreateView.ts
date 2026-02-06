@@ -1,0 +1,47 @@
+export function createView(): string {
+  return `
+<header class="topbar">
+  <a class="brand" href="/">ArcadeWire</a>
+  <nav class="nav">
+    <a class="navlink" href="/enter">Enter Code</a>
+  </nav>
+</header>
+
+<main class="main">
+  <section class="card" data-view="create">
+    <h1 class="title">Create ArcadeWire</h1>
+    <p class="subtitle">One click. One code. Expires in 10 minutes.</p>
+
+    <div class="actions">
+      <button class="btn primary" data-action="create">Create ArcadeWire</button>
+    </div>
+
+    <div class="result" hidden>
+      <div class="divider"></div>
+      <h2 class="h2">ArcadeWire Created</h2>
+      <div class="label">Your code:</div>
+      <div class="code" data-bind="code">—</div>
+      <div class="row">
+        <button class="btn" data-action="copy" disabled>Copy</button>
+        <button class="btn" data-action="qr" disabled>Show QR</button>
+      </div>
+      <div class="hint" data-bind="expires">Expires in 10 minutes</div>
+    </div>
+
+    <div class="toast" hidden data-bind="toast"></div>
+  </section>
+</main>
+
+<dialog class="modal" data-modal="qr">
+  <div class="modalHead">
+    <div class="modalTitle">QR Code</div>
+    <button class="btn small" data-action="close-qr">Close</button>
+  </div>
+  <div class="modalBody">
+    <div class="qrWrap" data-bind="qr"></div>
+    <div class="hint">This QR contains only the code text.</div>
+  </div>
+</dialog>
+`;
+}
+

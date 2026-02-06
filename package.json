@@ -1,0 +1,15 @@
+{
+  "name": "arcadewire",
+  "version": "0.1.0",
+  "description": "Human-first exchange system with near-zero cognitive load.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch --experimental-strip-types src/server.ts",
+    "start": "node --experimental-strip-types src/server.ts",
+    "test": "node --experimental-strip-types tests/code.spec.ts && node --experimental-strip-types tests/exchange.spec.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED"
+}
